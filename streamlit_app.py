@@ -7,7 +7,8 @@ import base64
 from io import BytesIO
 
 # FastAPIエンドポイントのURL
-FASTAPI_URL = "http://localhost:8000/segment"
+# FASTAPI_URL = "http://localhost:8000/segment" # Local
+FASTAPI_URL = "https://st-fast-heart.onrender.com/segment" # Render
 
 st.title('Heart MRI Semantic Segmentation')
 
