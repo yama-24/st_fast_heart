@@ -34,6 +34,9 @@ async def segment_image(file: UploadFile = File(...)):
     # 出力から余分な次元を削除
     y_numpy = y_numpy.squeeze()
 
+    # 出力の反転（白黒の反転を防ぐ）
+    y_numpy = 1 - y_numpy
+
     # スケーリング
     result_image = y_numpy.astype(np.uint8)
 
